@@ -3,7 +3,7 @@ import random
 def main():
     while True:
         try:
-            userRange = input("Define upper and lower limits (eg: A and B):").strip()
+            userRange = input("Define lower and upper limits (eg: A and B):").strip()
             userRange = userRange.split(" ")
             upperLimit = int(userRange[0])
             lowerLimit = int(userRange[2])
