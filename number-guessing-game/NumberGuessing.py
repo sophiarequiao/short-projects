@@ -3,14 +3,17 @@ import random
 def main():
     while True:
         try:
-            userRange = int(input("Define limit:"))
-        except ValueError:
-            print("Please select a number")
+            userRange = input("Define upper and lower limits (eg: A and B):").strip()
+            userRange = userRange.split(" ")
+            upperLimit = int(userRange[0])
+            lowerLimit = int(userRange[2])
+        except (ValueError, IndexError):
+            pass
         else:
             break
     
     tries = 0
-    targetNumber = random.randint(0,userRange)
+    targetNumber = random.randint(upperLimit,lowerLimit)
 
     while True:
         tries+=1
