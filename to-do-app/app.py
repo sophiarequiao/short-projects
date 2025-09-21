@@ -15,6 +15,9 @@ Please choose one of these option:
 
 Your selection: """
 
+
+
+
 def menu():
     connection = database.create_connection()
 
@@ -47,6 +50,9 @@ def menu():
         
     database.close_connection(connection)
 
+
+
+
 def toDate(dateOfUser):
     while True:
         try:
@@ -61,4 +67,7 @@ def toDate(dateOfUser):
             dateOfUser = input(f"{Fore.RED}WARNING:{Style.RESET_ALL} Please write the date as dd/mm/yyyy!!\n" \
                                 "Date: ")
 
-menu()
+
+
+if __name__ == "__main__":
+    menu()

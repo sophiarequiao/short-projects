@@ -49,4 +49,5 @@ def menu():
                 print("\nWARNING: Choose a valid option\n")
     database.close_connection(connection)
 
-menu()
+if __name__ == "__main__":
+    menu()
