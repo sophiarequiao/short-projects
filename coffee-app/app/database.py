@@ -20,6 +20,9 @@ GET_BEST_PREPARATIONS_FOR_BEANS= """SELECT * FROM beans
 def connect():
     return sqlite3.connect("data.db") #create a database, if the file doesn't exist it creates the file 
 
+def close_connection(connection):
+    connection.close() #create a database, if the file doesn't exist it creates the file 
+
 def create_tables(connection):
     with connection:
         connection.execute(CREATE_BEANS_TABLE)

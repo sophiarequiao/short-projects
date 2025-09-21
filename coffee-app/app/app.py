@@ -47,5 +47,6 @@ def menu():
                 print(tabulate(listOfAllBeansNoId,headers = [ "METHOD","RATING"],tablefmt="rst"))
             case _:
                 print("\nWARNING: Choose a valid option\n")
+    database.close_connection(connection)
 
 menu()
